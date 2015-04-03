@@ -196,12 +196,15 @@ function query_for_user_1(){
 function query_for_artist_works(user_id){
 	var filters = [
 		{
-			field: 
+			field: WORK_ARTIST_ID_FIELD,
+			operator: "is",
+			value: user_id
 		}
-	]
+	];
+	var param = encodeURIComponent(JSON.stringify(filters));
 
 	$.ajax(
-		url: "https://api.knackhq.com/v1/objects/"+WORK_OBJECT+"/records",
+		url: "https://api.knackhq.com/v1/objects/" + WORK_OBJECT + "/records?filters=" + param,
 		type: "GET",
 		dataType: "JSON",
 		headers: {
@@ -209,7 +212,7 @@ function query_for_artist_works(user_id){
 				'X-Knack-REST-API-Key': apikey
 		},
 		success: function(data){
-			
+			console.log(data);
 		}
 	);
 }

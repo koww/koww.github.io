@@ -1,163 +1,150 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang=en>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<style>
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote {
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    color: #737373;
-    background-color: white;
-    margin: 10px 13px 10px 13px;
-}
-table {
-	margin: 10px 0 15px 0;
-	border-collapse: collapse;
-}
-td,th {	
-	border: 1px solid #ddd;
-	padding: 3px 10px;
-}
-th {
-	padding: 5px 10px;	
-}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="github personal page">
+    <meta name="author" content="Yusu 'Khaos' Gao">
 
-a {
-    color: #0069d6;
-}
-a:hover {
-    color: #0050a3;
-    text-decoration: none;
-}
-a img {
-    border: none;
-}
-p {
-    margin-bottom: 9px;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #404040;
-    line-height: 36px;
-}
-h1 {
-    margin-bottom: 18px;
-    font-size: 30px;
-}
-h2 {
-    font-size: 24px;
-}
-h3 {
-    font-size: 18px;
-}
-h4 {
-    font-size: 16px;
-}
-h5 {
-    font-size: 14px;
-}
-h6 {
-    font-size: 13px;
-}
-hr {
-    margin: 0 0 19px;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-}
-blockquote {
-    padding: 13px 13px 21px 15px;
-    margin-bottom: 18px;
-    font-family:georgia,serif;
-    font-style: italic;
-}
-blockquote:before {
-    content:"\201C";
-    font-size:40px;
-    margin-left:-10px;
-    font-family:georgia,serif;
-    color:#eee;
-}
-blockquote p {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 18px;
-    margin-bottom: 0;
-    font-style: italic;
-}
-code, pre {
-    font-family: Monaco, Andale Mono, Courier New, monospace;
-}
-code {
-    background-color: #fee9cc;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 1px 3px;
-    font-size: 12px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-pre {
-    display: block;
-    padding: 14px;
-    margin: 0 0 18px;
-    line-height: 16px;
-    font-size: 11px;
-    border: 1px solid #d9d9d9;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-pre code {
-    background-color: #fff;
-    color:#737373;
-    font-size: 11px;
-    padding: 0;
-}
-sup {
-    font-size: 0.83em;
-    vertical-align: super;
-    line-height: 0;
-}
-* {
-	-webkit-print-color-adjust: exact;
-}
-@media screen and (min-width: 914px) {
+    <title>View Tab</title>
+    <!-- jquery.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js" charset="utf-8"></script>
+    <!-- D3.js -->
+    <script type="text/javascript" src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <!-- bootstrap css and js from MaxCDN -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+    <style>
     body {
-        width: 854px;
-        margin:10px auto;
+        padding-top: 50px;
     }
-}
-@media print {
-	body,code,pre code,h1,h2,h3,h4,h5,h6 {
-		color: black;
-	}
-	table, pre {
-		page-break-inside: avoid;
-	}
-}
-</style>
-<title>github.io page</title>
+    .section {
+        border-top: thin inset #aaaaaa;
+    }
 
+    </style>
 </head>
 <body>
-<h1>github.io page</h1>
+    <!-- navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Resume for Yusu Gao</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Top</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#activities">Activities</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-<p>This is the temporary placeholder for the page. Projects coming soon.</p>
+    <div class="container">
+      <div id="top" class="section">
+        <h2>Yusu Gao</h2>
+        <h5>MSIT graduate student from <a href="http://www.wpi.edu/">WPI</a> actively looking for a full time postion as an Application Developer</h5>
+      </div>
+
+      <div id="contact" class="section">
+        <h3>Contact</h3>
+        <span>Email: kowgarnett[at]gmail.com</span><br />
+        <span>Mobile: 1.(781).491.3831</span><br />
+        <span>Mail: 214D E Mountain St, Apt 74, Worcester, MA 01606</span>
+      </div>
+
+      <div id="education" class="section">
+        <h3>Education</h3>
+        <div class="schools">
+            <p>
+                <span><b>Master of Science in Information Techonology</b></span>, GPA 3.33 / 4.0<br />
+                <span><b>Worcester Polytechnic Institute (WPI)</b>, Worcester, MA, May 2016</span>
+            </p>
+        </div>
+        <div class="schools">
+            <p>
+                <span><b>Bachelor of Engineering in Information and Comptuer Engineering</b></span><br />
+                <span><b>Nagoya University</b>, Nagoya, Japan, March 2014</span>
+            </p>
+        </div>
+      </div>
+
+      <div id="skills" class="section">
+        <h3>Skills</h3>
+        <div class="skillset">
+            <p><b>Programming:</b> C, C#/ASP.NET, Java/JSP, Javascript(jQuery.js with ajax, d3.js, canvas.js), PHP, SQL, Bash Shell, Python, VBA, etc.
+            </p>
+        </div>
+        <div class="skillset">
+            <p><b>Applications:</b> MySQL, Microsoft SQL Server(2008/2012), PostgreSQL, Microsoft Office(Word, Excel, Powerpoint, Visio, Project), etc.
+            </p>
+        </div>
+        <div class="skillset">
+            <p><b>Languages:</b> English(Proficiency), Chinese Mandarin(Native speaker), Japanese(Proficency)
+            </p>
+        </div>
+      </div>
+
+      <div id="experience" class="section">
+        <h3>Experience</h3>
+        <div class="single-exp">
+            <p><b>System Architect Internship/Contractor</b>, Calsoft Systems, Torrance, CA, <b>Jun - Sept 2015</b></p>
+            <p>Worked as application developer and entry level QA engineer for BI business unit</p>
+            <ul>
+                <li>Developed cross-platform web application for manufacture industry vendor as mobile extension for their latest products. Optimized the business logic by reducing the task time <u>in half</u>. Performed unit testing and generated test reports in Excel.</li>
+                <li>Participated as QA engineer to cleanse and load master data for clients, provide feedback on data integrity, generate test cases, mannually run unit tests for each function modules, and complie test result reports. Optimized management process and cut the workload to <u>1/7</u> by developing a VBA application to manage master data synchronization among different client databases located in different offices around the world.
+                </li>
+            </ul>
+        </div>
+        <div class="single-exp">
+            <p><b>Graduate Assistant</b>, Foisie School of Business, WPI, Worcester, MA, <b>Dec 2014 - May 2015</b></p>
+            <p>Designed and developed webpage templates for faculty memebers to update their online profiles easily.</p>
+        </div>
+      </div>
+
+      <div id="projects" class="section">
+        <h3>Projects</h3>
+        <div class="single-project">
+            <p><b>Independent Study Project</b>, WPI, Jan - May 2016</p>
+            <p>Developed a platform for individual users to organize customized fitness activities and invite friends to participate with gamification factors. Used Drupal and its modules as the basic structure for the platform and wrote PHP pages for Fitbit OAuth 2.0 authentications and database operations. Used Canvas.js for data visualization.</p>
+            <p>link: <a href="http://brin.kknows.net/">http://brin.kknows.net</a></p>
+        </div>
+        <div class="single-project">
+            <p><b>3-Layer OSI model simulation</b>, WPI, Sept - Dec 2015</p>
+            <p>Built a Client-Server application in C simulating an abbreviated 3-Layer network communication protocol implementation deploying both go-back-n and selective-repeat to for error control.</p>
+        </div>
+        <div class="single-project">
+            <p><b>System Design and Developement</b></p>
+            <p>Developed an internal website for Boston Sculptor Gallery to digitalize their management system for exhibitions, artists, artifacts, and visitors. Shortened the development period by using Knackhq.</p>
+        </div>
+        <div class="single-project">
+            <p><b></b></p>
+            <p></p>
+        </div>
+      </div>
+
+      <div id="activities" class="section">
+        <h3>Activities</h3>
+        <ul>
+            <li>Vice Director of IT Dept. in Chinese Students and Scholar Association, WPI, Apr 2015 - Apr 2016</li>
+            <li>General member, National Association of Women MBA, WPI, Sept 2014 - Apr 2015</li>
+            <li>Member of Bridge Fellowship, WPI, Oct 2014 - Present</li>
+            <li>Accountant, general member, Contract Bridge Circle, Nagoya University, Aug 2010 - Mar 2014</li>
+        </ul>
+      </div>
+    </div><!-- /.container -->
 </body>
 </html>

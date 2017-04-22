@@ -1,2 +1,4 @@
 # github.io page
-This page is going to be used to demonstrate my personal resume.
+广告位招租
+
+Advertisement spaces available, contact me for a deal.
